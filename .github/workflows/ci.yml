@@ -34,3 +34,13 @@ jobs:
 
       - name: Construir imagem Docker
         run: docker build -t ci-cd-lab .
+  deploy:
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Disparar Deploy no Render
+        run: |
+          curl -X POST \
+          ${{ secrets.RENDER_DEPLOY_HOOK }}
