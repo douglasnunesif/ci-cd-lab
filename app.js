@@ -13,7 +13,11 @@ let usuarios = [{ id: 1, nome: "Marcelo" }];
  * Rota principal
  */
 app.get("/", (req, res) => {
-  res.status(200).send("Aplicação ainda funcionando!");
+  res
+    .status(200)
+    .send(
+      "Laboratório CI/CD funcionando! Nova versão implantada automaticamente!",
+    );
 });
 
 /*
