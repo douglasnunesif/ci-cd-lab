@@ -13,7 +13,7 @@ let usuarios = [{ id: 1, nome: "Marcelo" }];
  * Rota principal
  */
 app.get("/", (req, res) => {
-  res.status(200).send("Aplicação funcionando!");
+  res.status(200).send("Aplicação ainda funcionando!");
 });
 
 /*
